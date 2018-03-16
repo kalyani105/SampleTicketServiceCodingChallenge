@@ -42,16 +42,18 @@ Program starts with below lines
 Sequence Diagrams:
 1)	Sequence diagram for Option 1. Available Seats
 
-![What is this](images/AvailableSeatsSequenceDiagram.jpg)
+![Availabe Sequence Diagram](images/AvailableSeatsSequenceDiagram.jpg)
  
 
 
 
 2)	Sequence Diagram for Option 2.Request for Hold
+![Hold Seat Sequence Diagram](images/HoldSeatsSequenceDiagram.jpg)
 
  
 
 3)	Sequence Diagram for Option 3. Reserve
+![Reserve Seat Sequence Diagram](images/ReserveSeatsSequenceDiagram.jpg)
  
 Others:
 1)	Jacoco plugin is integrated to check code coverage report and it is available at /target/site/jacoco/index.html
