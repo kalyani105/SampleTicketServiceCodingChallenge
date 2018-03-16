@@ -12,6 +12,7 @@ public class RunTicketService {
      * Entry point for the Sample Ticket Service
      * Which can be tested via CMD prompt with options
      * and respective questions to execute the test cases     *
+     *
      * @param args
      * @throws IOException
      */
@@ -35,15 +36,22 @@ public class RunTicketService {
 
         while (continueTestExecution) {
             System.out.println("\nPlease select from the below option numbers to test Sample Ticket Service");
-            String options = "\nOptions: \n1. Available Seats \n2. Request for Hold \n3. Reserve \n ";
+            String options = "\nOptions: \n1. Available Seats \n2. Request for Hold \n3. Reserve \n4.Exit the Application\n ";
             System.out.println(options);
             String str = sc.next();
-
-            int input = Integer.parseInt(str);
+            int input = 0;
+            try {
+                input = Integer.parseInt(str);
+            }catch (NumberFormatException e){
+                System.out.println("Please enter valid option type");
+                System.out.println("*****************************\n");
+                break;
+            }
             //switch case to handle inputs from the cmd prompt
             switch (input) {
                 case 1:
                     System.out.println("No.of Seats Availabe = " + ticketService.numSeatsAvailable());
+                    System.out.println("*****************************\n");
                     break;
                 case 2:
                     try {
@@ -55,11 +63,14 @@ public class RunTicketService {
                         try {
                             SeatHold seatHoldResponse = ticketService.findAndHoldSeats(noOfSeats, holdCustomerEmail);
                             System.out.println("\n" + seatHoldResponse.toString());
+                            System.out.println("*****************************\n");
                         } catch (TicketServiceException e) {
                             System.out.println("\n" + e.getErrorMsg());
+                            System.out.println("*****************************\n");
                         }
                     } catch (Exception e) {
-                        System.out.println("\n Please enter valid input.");
+                        System.out.println("Please enter valid input.");
+                        System.out.println("*****************************\n");
                     }
                     break;
                 case 3:
@@ -72,16 +83,26 @@ public class RunTicketService {
                         try {
                             String reserveResponse = ticketService.reserveSeats(holdConfirmationCode, reserveCustomerEmail);
                             System.out.println("\n" + reserveResponse.toString());
+                            System.out.println("*****************************\n");
+
                         } catch (TicketServiceException e) {
                             System.out.println("\n" + e.getErrorMsg());
+                            System.out.println("*****************************\n");
                         }
                     } catch (Exception e) {
                         System.out.println("\n Please enter valid input.");
+                        System.out.println("*****************************\n");
                     }
+                    break;
+                case 4:
+                    continueTestExecution = false;
+                    System.out.println("Gracefully Exiting the Application");
+                    System.out.println("*****************************\n");
                     break;
 
                 default:
-                    System.out.println("Please enter valid input type");
+                    System.out.println("Please enter valid option type");
+                    System.out.println("*****************************\n");
                     break;
             }
         }
