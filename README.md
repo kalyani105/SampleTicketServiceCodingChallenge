@@ -45,6 +45,8 @@ Program starts with below lines
 
 7) And we can test option 3 by typing 3 and see the below screen for reference
 ![TestCase3](images/TestCase3.jpg)
+
+8)You can exit application by selecting the option 4.
  
 
 Sequence Diagrams:
