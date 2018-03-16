@@ -20,14 +20,16 @@ Building and Testing the Code:
 
 4)	Once you run the above commands the project should be build and target folder will be created and program will start running asking for the options to enter you can test all three scenarios from the command prompt, reference screens attached.
 Program starts with below lines
-
+![ApplicationStartUpScreen](images/ApplicationStartUpScreen.jpg)
  
 
 5) Here you can start testing the program, once you hit 1, it will print below lines
+![Testcase1](images/Testcase1.jpg)
 
  
 
 6) Now you can test option 2 by typing 2, then it will promt for inputs once you enter those inputs output will be like below
+![TestCase2](images/TestCase2.jpg)
  
 
 
@@ -38,6 +40,7 @@ Program starts with below lines
 
 
 7) And we can test option 3 by typing 3 and see the below screen for reference
+![TestCase3](images/TestCase3.jpg)
  
 
 Sequence Diagrams:
