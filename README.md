@@ -2,14 +2,16 @@
 
 A simple ticket service that facilitates the discovery, temporary hold and final reservation of seats within a high-demand performance venue.
 
-Assumptions:
+    Assumptions:
 
-    1)	The highest priority available seat is the seat farthest from the screen and the left most one, and least prior one will be the row nearest to the screen and the right most.
-    2)	Number of Rows and Number of seat per row are defaulted to 10, and  hold expiration is set to 120 seconds and these are available to change if required in an external property file TicketServiceConfiguration.properties.
-    3)	Logging has been enabled and the file is available at logs/TicketServiceLogger.
-    4)	Seat number will be the rownumber:SeatPostiionNumber in the row.
-    5)	There is no restriction on how many times or how many tickets a customer can book.
-Building and Testing the Code: 
+1)	The highest priority available seat is the seat farthest from the screen and the left most one, and least prior one will be the row nearest to the screen and the right most.
+2)	Number of Rows and Number of seat per row are defaulted to 10, and  hold expiration is set to 120 seconds and these are available to change if required in an external property file TicketServiceConfiguration.properties.
+3)	Logging has been enabled and the file is available at logs/TicketServiceLogger.
+4)	Seat number will be the rownumber:SeatPostiionNumber in the row.
+5)	There is no restriction on how many times or how many tickets a customer can book.
+
+        Building and Testing the Code: 
+
 1)	Clone the project from Git to the local computer.
 2)	Make sure JAVA is installed and JAVA_HOME and MAVEN_HOME are set up in the path variables.
 3)	Once you are in the SampleTicketService folder start running the below commands in the command prompt.
