@@ -1,4 +1,5 @@
-Ticket Service Coding Challenge
+                                    Ticket Service Coding Challenge
+
 A simple ticket service that facilitates the discovery, temporary hold and final reservation of seats within a high-demand performance venue.
 Assumptions:
 1)	The highest priority available seat is the seat farthest from the screen and the left most one, and least prior one will be the row nearest to the screen and the right most.
