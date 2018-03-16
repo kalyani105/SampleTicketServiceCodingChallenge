@@ -41,6 +41,8 @@ Program starts with below lines
 
 Sequence Diagrams:
 1)	Sequence diagram for Option 1. Available Seats
+
+![What is this](images/AvailableSeatsSequenceDiagram.png)
  
 
 
