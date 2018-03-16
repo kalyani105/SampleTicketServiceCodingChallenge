@@ -10,10 +10,10 @@ public class Order {
    int reserveConfirmationCode;
    long expirationTime;
 
-   private static Random randomReserveConfGenerator = new Random();
+   private static Random randomReserveConfGenerator = new Random(8);
 
    public Order(){
-       this.reserveConfirmationCode = randomReserveConfGenerator.nextInt();
+       this.reserveConfirmationCode = randomReserveConfGenerator.nextInt() & Integer.MAX_VALUE;;
    }
 
     public boolean isExpired() {
